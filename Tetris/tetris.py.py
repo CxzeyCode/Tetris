@@ -150,7 +150,7 @@ class Text(pygame.sprite.Sprite):
     def __init__(self, x_coord, y_coord, text, size, colour):
         #creates the text sprite for displaying messages
         super().__init__()
-        self.font = pygame.font.Font("/Users/alfie/Documents/Computer Science/coolvetica/Coolvetica Rg.otf", size)
+        self.font = pygame.font.Font("/coolvetica/Coolvetica Rg.otf", size)
         self.image = self.font.render(text, "AA", colour)
         self.rect = self.image.get_rect(center=(x_coord, y_coord))
 
@@ -223,16 +223,16 @@ screen = pygame.display.set_mode(size)
 
 pygame.display.set_caption("Tetris")
 
-background_image = pygame.image.load("/Users/alfie/Documents/Computer Science/sky-clouds-cinematic-clouds-wallpaper-3_1562-740.jpeg")
+background_image = pygame.image.load("/Tetris Images/sky-clouds-cinematic-clouds-wallpaper-3_1562-740.jpeg")
 background_image = pygame.transform.scale(background_image, size)
 
-area_fill = pygame.image.load("/Users/alfie/Documents/Computer Science/sky-clouds-cinematic-clouds-wallpaper-3_1562-740.jpeg")
+area_fill = pygame.image.load("/Tetris Images/sky-clouds-cinematic-clouds-wallpaper-3_1562-740.jpeg")
 area_fill = pygame.transform.scale(area_fill, size)
 
 welcome_text = pygame.sprite.GroupSingle()
 welcome_text.add(Text(350, 50, "Welcome to Tetris!", 35, "black"))
 
-custom_font_path = ("/Users/alfie/Documents/Computer Science/coolvetica/Coolvetica Rg.otf")
+custom_font_path = ("/coolvetica/coolvetica/Coolvetica Rg.otf")
 
 done = False
 clock = pygame.time.Clock()
